@@ -1,6 +1,7 @@
 #include "Text.h"
 #include <iostream>
 #include <cstring>
+#include <fstream>
 #include <iomanip>
 
 using namespace std;
