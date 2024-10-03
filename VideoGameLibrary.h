@@ -21,8 +21,8 @@ class VideoGameLibrary
     void loadVideoGameFromFile(const char* filename);
     void saveToFile(const char *filename);
     void displayVideoGames();
-    void displayVideoGameTitles();
-
+    void displayVideoGameTitles();   
+    
 
     private:
     VideoGame** videoGamesArray;

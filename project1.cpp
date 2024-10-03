@@ -11,62 +11,65 @@ int main()
 
     do{
         cout << "What would you like to do?" << endl;
-        cout << "1. Print Menu" << endl;
+        cout << "1. load video games from a file" << endl;
         cout << "2. Save video games to a file" << endl;
-        cout << "3. Add an item to your order" << endl;
-        cout << "4. Remove an item from your order" << endl;
-        cout << "5. Display your order" << endl;
-        cout << "6. Checkout" << endl;
-        cout << "Choose 1 - 6: ";
+        cout << "3. Add a video game" << endl;
+        cout << "4. Remove a video game" << endl;
+        cout << "5. Display Video Games" << endl;
+        cout << "6. Add Video Game Review" << endl;
+        cout << "7. Remove Video Game Review" << endl;
+        cout << "8. Display reviews" << endl;
+        cout << "Choose 1 - 8: ";
         cin  >> choice;
 
             switch (choice)
             {
                 case 1: 
                     {
-                        cout << "Here is the Menu";
-                        cin >> filename;
-                        cout << "Entrees:";
-                        cout << "Hamburger: $2.50";
-                        cout << "Cheeseburger: $2.90 ";
-                        cout << "Bacon Burger: $3.80";
-                        cout << "Chicken Sandwhich: $6.65";
-                        cout << "Sides:";
-                        cout << "French Fries $3.50";
-                        cout << "Onion Rings $3.00";
-                        cout << "Chicken Fries (8 count) $4.25";
-                        cout << "Cookie $1.00";
-                        cout << "Drinks:";
-                        cout << "Draft non-import Beer $5.00";
-                        cout << "Pepsi Products: $2.00";
+                       void loadVideoGameFromFile(const char* filename);
                     }
                     break;
                 
                 case 2:
                     {
-
+                        void saveToFile(const char *filename);
                     }
                     break;
                 
                 case 3:
                     {
-                        cout << "You have added " << x << " to your order.";
+                        void addVideoGametoArray();
                     }
                     break;
                 
                 case 4:
                     {
-                        cout << "You have removed " << x << " from your order.";
+                        void removeVideoGameFromArray();
                     }
                     break;
                 
                 case 5:
                     {
-                        
+                        void displayVideoGames();
+                    }
+                    break;
+                case 6:
+                    {
+
+                    }
+                    break;
+                case 7:
+                    {
+
+                    }
+                    break;
+                case 8:
+                    {
+
                     }
                     break;
             }
-    } while(choice != 6);
+    } while(choice != 8);
 
     return 0;
            

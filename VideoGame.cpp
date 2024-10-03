@@ -33,7 +33,7 @@ void VideoGame::printVideoGameDetails()
 
     gamenum += 1; //increment num to keep track of each number
 }
-//prints info for each vide game 
+//prints info for each video game 
 
 void VideoGame::printVideoGameDetailsToFile(fstream& outfile)
 {
