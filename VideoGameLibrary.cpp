@@ -139,7 +139,6 @@ void VideoGameLibrary::loadVideoGameFromFile(const char* file)
             if(numGames == maxGames)
             {
                 resizeVideoGameArray();
-                cout << "\nResizing array from " << maxGames / 2 << " to " << maxGames << "\n";
             }
             //array can be resized if needed
 
@@ -150,7 +149,8 @@ void VideoGameLibrary::loadVideoGameFromFile(const char* file)
             cout << "\n" << nGM->getVideoGameTitle()->getText() << " was added successfully";
         }
     }
-    cout << "\n" << x << " video games were read from the file and added to your VideoGame library";
+    cout << "\n" << x << " video games were read from the file and added to your VideoGame library" << endl;
+    cout << endl;
    
     infile.close();
 }
@@ -181,15 +181,15 @@ void VideoGameLibrary::removeVideoGameFromArray()
     }
     //checks for valid input
 
-    opt = opt - 1;
+    cout << "\nThe selected video game has been successfully removed. Select Display Video Games to see current games in library." << endl; // deletes selected title
+    delete videoGamesArray[opt - 1];
 
-    for (int i = opt; i < numGames - 1; i++)
+    for (int i = opt-1; i < numGames - 1; i++)
     {
-        videoGamesArray[i] = videoGamesArray[i+1]; //deletes selected title
+        videoGamesArray[i] = videoGamesArray[i+1]; 
     }
     //moves all of the games back one since one is being deleted
 
-    cout << "\nVideo Game Title has been successfully deleted";
     numGames--;
 }
 
@@ -206,4 +206,5 @@ void VideoGameLibrary::saveToFile(const char* file)
     //opens file and prints the details to file
 
     cout << "\nAll video Games have been printed to " << file << "\n";
+    cout << endl;
 }
