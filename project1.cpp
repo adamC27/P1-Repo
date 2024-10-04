@@ -14,7 +14,7 @@ int main()
     cin >> maxSize;
     cout << endl;
     
-    VideoGameLibrary* library = new VideoGamelibrary(maxSize);
+    VideoGameLibrary* library = new VideoGameLibrary (maxSize);
     VideoGameReview Review;
 
     do{
@@ -25,10 +25,9 @@ int main()
         cout << "4. Remove a video game" << endl;
         cout << "5. Display Video Games" << endl;
         cout << "6. Add Video Game Review" << endl;
-        cout << "7. Remove Video Game Review" << endl;
-        cout << "8. Display reviews" << endl;
-        cout << "9. Remove ALL games and END program" << endl;
-        cout << "Choose 1 - 9: ";
+        cout << "7. Display reviews" << endl;
+        cout << "8. Remove ALL games and END program" << endl;
+        cout << "Choose 1 - 8: ";
         cin  >> choice;
 
             switch (choice)
@@ -76,18 +75,13 @@ int main()
                     break;
                 case 7:
                     {
-
-                    }
-                    break;
-                case 8:
-                    {
                         Review.loadReviewFromFile();
                     }
                     break;
             }
-    } while(choice != 9);
+    } while(choice != 8);
 
-    if(choice == 9)
+    if(choice == 8)
     {
         delete library;
         return 0;
