@@ -15,6 +15,7 @@ int main()
     cout << endl;
     
     VideoGameLibrary* library = new VideoGamelibrary(maxSize);
+    VideoGameReview Review;
 
     do{
         cout << "\n\nWhat would you like to do?" << endl;
@@ -69,7 +70,8 @@ int main()
                     break;
                 case 6:
                     {
-
+                        cin.ignore();
+                        Review.WriteToFile();
                     }
                     break;
                 case 7:
@@ -79,7 +81,7 @@ int main()
                     break;
                 case 8:
                     {
-
+                        Review.loadReviewFromFile();
                     }
                     break;
             }

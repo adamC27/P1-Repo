@@ -4,16 +4,19 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
-#include "VideoGameReview.h"
+#include <string>
+
 using namespace std;
 
 class VideoGameReview
 {
-    public:
-    void loadReviewFromFile(const char* filename);
-    void saveReviewToFile(const char *filename);
-    void displayVideoGames();
- 
+public:
+	void loadReviewFromFile();
+	void WriteToFile();
+
+private:
+	string review;
+	string rating;
 };
 
 #endif
